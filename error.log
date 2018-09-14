@@ -23,3 +23,5 @@
 [Thu Sep 13 08:13:04.490834 2018] [authz_core:error] [pid 413] [client 127.0.0.1:43306] AH01630: client denied by server configuration: /var/www/magento-test/app/etc/config.php
 [Thu Sep 13 08:31:04.849379 2018] [authz_core:error] [pid 411] [client 127.0.0.1:52330] AH01630: client denied by server configuration: /var/www/magento-test/app/etc/config.php
 [Fri Sep 14 06:37:17.554872 2018] [authz_core:error] [pid 748] [client 127.0.0.1:49210] AH01630: client denied by server configuration: /var/www/magento-test/app/etc/config.php
+[Fri Sep 14 12:57:30.465575 2018] [:error] [pid 1598] [client 10.0.3.1:37202] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF), expecting end of file in /var/www/magento-test/app/design/frontend/TestCompany/boardBasement/Magento_Theme/templates/html/new-stuff.phtml on line 158
+[Fri Sep 14 12:57:37.536979 2018] [:error] [pid 2101] [client 10.0.3.1:37204] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF), expecting end of file in /var/www/magento-test/app/design/frontend/TestCompany/boardBasement/Magento_Theme/templates/html/new-stuff.phtml on line 158

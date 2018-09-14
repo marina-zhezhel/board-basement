@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!-- /** * Copyright © Magento, Inc. All rights reserved. * See COPYING.txt 
+	for license details. */ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body>
+		<referenceContainer name="content">
+			<container name="page.banners" htmlTag="section" htmlClass="banners"
+				before="-">
+				<block class="Magento\Framework\View\Element\Template" name="banners"
+					template="Magento_Cms::html/banners.phtml"></block>
+			</container>
+			<container name="page.categories" htmlTag="section" htmlClass="categories"
+				after="page.banners">
+				<block class="Magento\Framework\View\Element\Template" name="categories"
+					template="Magento_Cms::html/categories.phtml"></block>
+			</container>
+			<container name="new.stuff" htmlTag="section" htmlClass="new-stuff"
+				after="page.categories">
+				<block class="Magento\Framework\View\Element\Template" name="new-stuff"
+					template="Magento_Cms::html/new-stuff.phtml"></block>
+			</container>
+			<container name="page.brand" htmlTag="section" htmlClass="brand"
+				after="new.stuff">
+				<block class="Magento\Framework\View\Element\Template" name="brand"
+					template="Magento_Cms::html/brand.phtml"></block>
+			</container>
+		</referenceContainer>
+	</body>
+</page>
