@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!-- /** * Copyright © Magento, Inc. All rights reserved. * See COPYING.txt 
+	for license details. */ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body>
+		<referenceContainer name="header.right.wrapper">
+			<container name="minicart.wrapper" htmlTag="div"
+				htmlClass="minicart-wrapper" after="header.favorite"></container>
+		</referenceContainer>
+		<move element="minicart" destination="minicart.wrapper" before="-" />
+	</body>
+</page>

@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!-- /** * Copyright © Magento, Inc. All rights reserved. * See COPYING.txt 
+	for license details. */ -->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body>
+		<referenceBlock name="logo">
+			<arguments>
+				<argument name="logo_file" xsi:type="string">images/header-logo.png
+				</argument>
+				<argument name="logo_img_width" xsi:type="number">220.81</argument>
+				<argument name="logo_img_height" xsi:type="number">69.68</argument>
+			</arguments>
+		</referenceBlock>
+		<referenceContainer name="header.container">
+			<container name="header.border" before="-">
+				<block class="Magento\Framework\View\Element\Template" name="header-border"
+					template="Magento_Theme::html/header-border.phtml"></block>
+			</container>
+			<container name="header.top" htmlTag="div" htmlClass="header-top"
+				after="header.border">
+				<container name="header.left.wrapper" htmlTag="div"
+					htmlClass="header-left-wrapper" before="-">
+				</container>
+				<container name="header.right.wrapper" htmlTag="div"
+					htmlClass="header-right-wrapper" after="header.left.wrapper">
+					<container name="main.phone" before="-">
+						<block class="Magento\Framework\View\Element\Template" name="main-phone"
+							template="Magento_Theme::html/main-phone.phtml"></block>
+					</container>
+					<container name="header.reviews" htmlTag="div" htmlClass="header-reviews"
+						after="header.authorization">
+						<block class="Magento\Framework\View\Element\Template" name="header-reviews"
+							template="Magento_Theme::html/header-reviews.phtml"></block>
+					</container>
+				</container>
+			</container>
+		</referenceContainer>
+		<referenceContainer name="footer-container">
+			<container name="footer.wrapper" htmlTag="div" htmlClass="footer-wrapper">
+				<container name="footer.top.wrapper" htmlTag="div"
+					htmlClass="footer-top-wrapper">
+					<container name="footer.info" htmlTag="section"
+						htmlClass="footer-info">
+						<block class="Magento\Framework\View\Element\Template" name="footer-info"
+							template="Magento_Theme::html/footer-info.phtml" />
+					</container>
+					<container name="page.social.wrapper" htmlTag="section"
+						htmlClass="page-social-wrapper">
+						<block class="Magento\Framework\View\Element\Html\Links"
+							name="footer_links">
+							<arguments>
+								<argument name="css_class" xsi:type="string">footer links
+								</argument>
+							</arguments>
+						</block>
+						<block class="Magento\Framework\View\Element\Template" name="social-wrapper"
+							template="Magento_Theme::html/social-wrapper.phtml" />
+					</container>
+					<container name="services.wrapper" htmlTag="section"
+						htmlClass="services-wrapper">
+						<block class="Magento\Framework\View\Element\Template" name="services"
+							template="Magento_Theme::html/services.phtml" />
+					</container>
+					<container name="footer.payment" htmlTag="section"
+						htmlClass="footer-payment">
+						<block class="Magento\Framework\View\Element\Template" name="footer-payment-title"
+							template="Magento_Theme::html/footer-payment-title.phtml" />
+						<block class="Magento\Framework\View\Element\Template" name="reviews-wrapper"
+							template="Magento_Theme::html/reviews-wrapper.phtml" />
+						<block class="Magento\Framework\View\Element\Template" name="payment-wrapper"
+							template="Magento_Theme::html/payment-wrapper.phtml" />
+					</container>
+				</container>
+				<container name="footer.bottom.wrapper" htmlTag="div"
+					htmlClass="footer-bottom-wrapper">
+					<container name="policy-wrapper" htmlTag="section"
+						htmlClass="policy-wrapper">
+						<block class="Magento\Framework\View\Element\Template" name="policy-wrapper-title"
+							template="Magento_Theme::html/policy-wrapper-title.phtml" />
+						<block class="Magento\Framework\View\Element\Template" name="policy-navigation"
+							template="Magento_Theme::html/policy-navigation.phtml" />
+						<block class="Magento\Theme\Block\Html\Footer" name="copyright"
+							template="Magento_Theme::html/copyright.phtml" />
+						<block class="Magento\Store\Block\Switcher" name="store_switcher"
+							as="store_switcher" template="Magento_Store::switch/stores.phtml" />
+					</container>
+
+				</container>
+			</container>
+			<container name="footer.site.by" htmlTag="div" htmlClass="footer-site-by">
+				<block class="Magento\Framework\View\Element\Template" name="header-reviews"
+					template="Magento_Theme::html/footer-site-by.phtml"></block>
+			</container>
+		</referenceContainer>
+		<move element="logo" destination="header.left.wrapper" before="-" />
+		<move element="top.search" destination="header.left.wrapper"
+			after="logo" />
+		<referenceContainer name="header.panel.wrapper"
+			remove="true"></referenceContainer>
+		<referenceContainer name="footer" remove="true"></referenceContainer>
+	</body>
+</page>
